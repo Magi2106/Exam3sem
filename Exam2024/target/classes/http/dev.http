@@ -1,0 +1,55 @@
+### Get All Trips
+GET http://localhost:7070/api/trips
+Content-Type: application/json
+
+### Get Trip by ID
+GET http://localhost:7070/api/trips/2
+Content-Type: application/json
+
+### Add a Trip
+POST http://localhost:7070/api/trips
+Content-Type: application/json
+
+{
+  "name": "New Trip",
+  "price": 199.99,
+  "starttime": "2023-08-01T09:00:00",
+  "endtime": "2023-08-05T18:00:00",
+  "startposition": "City Center",
+  "category": "ADVENTURE",
+  "guide": {
+    "id": 1
+  }
+}
+
+### Update a Trip
+PUT http://localhost:7070/api/trips/2
+Content-Type: application/json
+
+{
+  "name": "Updated Trip",
+  "price": 299.99,
+  "starttime": "2023-08-01T09:00:00",
+  "endtime": "2023-08-05T18:00:00",
+  "startposition": "City Center",
+  "category": "ADVENTURE",
+  "guide": {
+    "id": 1
+  }
+}
+
+### Delete a Trip
+DELETE http://localhost:7070/api/trips/55
+Content-Type: application/json
+
+### Add Guide to Trip
+PUT http://localhost:7070/api/trips/6/guides/2
+Content-Type: application/json
+
+### Filter Trips by Category
+GET http://localhost:7070/api/trips/category/ADVENTURE
+Content-Type: application/json
+
+### Get Total Price by Guide
+GET http://localhost:7070/api/trips/guides/totalprice
+Content-Type: application/json
